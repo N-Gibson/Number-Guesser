@@ -2,34 +2,34 @@
 <html>
   <head>
     <title>Number Guesser</title>
-    <link rel="stylesheet" type="text/css" href="../styles.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
   </head>
 <body>
-  <headder>
+  <header>
     <h1> NUMBER<span>GUESSER</span></h1>
-    <h3> ULTIMATE CHALLANGER EDITION </h3>
-  </headder>
+    <h3> ULTIMATE CHALLENGER EDITION </h3>
+  </header>
   <main>
     <section class="left">
       <form action="" class="input">
         <h3> Set Range </h3>
-        <p> Min Range </p>
+        <p class="form-info"> Min Range </p>
         <input type="text" name="min-range" alt="range-paramaters"/>
-        <p> Max Range </p>
+        <p class="form-info"> Max Range </p>
         <input type="text" name="max-range" alt="range-paramaters"/>
         <button name="update" alt="update-button"> UPDATE </button>
       </form>
       <form action="" class="input">
         <p> The Current Range is <span> 1 </span> to <span> 100 </span> </p>
         <h3> Challenger 1 </h3>
-        <p> Name </p>
+        <p class="form-info"> Name </p>
         <input type="text" name="challenger1-name" alt="challenger one name"/>
-        <p> Guess </p>
+        <p class="form-info"> Guess </p>
         <input type="text" name="challenger1-guess" alt="challenger one guess"/>
         <h3> Challenger 2 </h3>
-        <p> Name </p>
+        <p class="form-info"> Name </p>
         <input type="text" name="challenger2-name" alt="challenger two name"/>
-        <p> Guess </p>
+        <p class="form-info"> Guess </p>
         <input type="text" name="challenger2-guess" alt="challenger two guess"/>
         <button id="button-submit" name="submit-guess" alt="submit guess button"> SUBMIT GUESS </button>
         <button id="button-reset" name="reset-game" alt="reset game button"> RESET GAME </button>
@@ -38,48 +38,48 @@
       <div>
         <h3> Latest Score </h3>
         <article>
-          <p> Challenger 1 Name </p>
-          <p> current guess </p>
-          <p> 97 </p>
-          <p> that's too high </p>
+          <p class="guess-challenger-name"> Challenger 1 Name </p>
+          <p class="current-guess-text"> current guess </p>
+          <p class="previous-guess"> 97 </p>
+          <p class="feedback"> that's too high </p>
         </article>
         <article>
-          <p> Challenger 2 Name </p>
-          <p> current guess </p>
-          <p> 3 </p>
-          <p> that's too low </p>
+          <p class="guess-challenger-name"> Challenger 2 Name </p>
+          <p class="current-guess-text"> current guess </p>
+          <p class="previous-guess"> 3 </p>
+          <p class="feedback"> that's too low </p>
         </article>
       </div>
     </section>
     <section>
       <article>
         <p id="challenger-1-name"> CHALLENGER 1 NAME </p> 
-        <p> vs </p>
+        <p class="vs"> vs </p>
         <p id="challenger-2-name"> CHALLENGER 2 NAME </p>
         <h2 id="winner-name"> CHALLENGER 2 NAME </h2>
-        <h2> WINNER </h2>
-        <p> 47 GUESSES </p>
-        <p> 1.35 MINUTES </p>
+        <h2 class="winner-ticket"> WINNER </h2>
+        <p class="feedback"> <span> 47</span> GUESSES </p>
+        <p class="feedback"> <span> 1.35 </span> MINUTES </p>
         <img src="images/" alt="x out"/>
       </article>
       <article>
         <p id="challenger-1-name"> CHALLENGER 1 NAME </p> 
-        <p> vs </p>
+        <p class="vs"> vs </p>
         <p id="challenger-2-name"> CHALLENGER 2 NAME </p>
         <h2 id="winner-name"> CHALLENGER 1 NAME </h2>
-        <h2> WINNER </h2>
-        <p> 23 GUESSES </p>
-        <p> .5 MINUTES </p>
+        <h2 class="winner-ticket"> WINNER </h2>
+        <p class="feedback"><span> 23 </span> GUESSES </p>
+        <p class="feedback"> <span> .5 </span> MINUTES </p>
         <img src="images/" alt="x out"/>
       </article>
       <article>
         <p id="challenger-1-name"> CHALLENGER 1 NAME </p> 
-        <p> vs </p>
+        <p class="vs"> vs </p>
         <p id="challenger-2-name"> CHALLENGER 2 NAME </p>
         <h2 id="winner-name"> CHALLENGER 1 NAME </h2>
-        <h2> WINNER </h2>
-        <p> 1675 GUESSES </p>
-        <p> 3.5 MINUTES </p>
+        <h2 class="winner-ticket"> WINNER </h2>
+        <p class="feedback"> <span>1675 </span> GUESSES </p>
+        <p class="feedback"> <span> 3.5 </span> MINUTES </p>
         <img src="images/" alt="x out"/>
       </article>
     </section>
