@@ -3,16 +3,17 @@
   <head>
     <title>Number Guesser</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,700" rel="stylesheet">
   </head>
 <body>
   <header>
-    <h1> NUMBER<span>GUESSER</span></h1>
+    <h1> NUMBER<span class="skinny-font">GUESSER</span></h1>
     <h3> ULTIMATE CHALLENGER EDITION </h3>
   </header>
   <main>
     <section class="left">
       <form action="" class="input">
-        <h3> Set Range </h3>
+        <h4> Set Range </h4>
         <p class="form-info"> Min Range </p>
         <input type="text" name="min-range" alt="range-paramaters"/>
         <p class="form-info"> Max Range </p>
@@ -21,12 +22,12 @@
       </form>
       <form action="" class="input">
         <p> The Current Range is <span> 1 </span> to <span> 100 </span> </p>
-        <h3> Challenger 1 </h3>
+        <h4> Challenger 1 </h4>
         <p class="form-info"> Name </p>
         <input type="text" name="challenger1-name" alt="challenger one name"/>
         <p class="form-info"> Guess </p>
         <input type="text" name="challenger1-guess" alt="challenger one guess"/>
-        <h3> Challenger 2 </h3>
+        <h4> Challenger 2 </h4>
         <p class="form-info"> Name </p>
         <input type="text" name="challenger2-name" alt="challenger two name"/>
         <p class="form-info"> Guess </p>
@@ -36,7 +37,7 @@
         <button id="button-clear" name="clear-game" alt="clear game button"> CLEAR GAME </button>
       </form>
       <div>
-        <h3> Latest Score </h3>
+        <h4> Latest Score </h4>
         <article>
           <p class="guess-challenger-name"> Challenger 1 Name </p>
           <p class="current-guess-text"> current guess </p>
@@ -51,7 +52,7 @@
         </article>
       </div>
     </section>
-    <section>
+    <section class="right">
       <article>
         <p id="challenger-1-name"> CHALLENGER 1 NAME </p> 
         <p class="vs"> vs </p>
