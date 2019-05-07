@@ -1,0 +1,78 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+}
+
+header {
+  background-color: #404042;
+  height: 80px;
+  width: 100%;
+}
+
+h1 {
+
+}
+
+h3 {
+
+}
+
+main {
+
+}
+
+.left {
+
+}
+
+form {
+
+}
+
+input {
+
+}
+
+button {
+
+}
+
+span {
+
+}
+
+#button-submit {
+
+}
+
+#button-reset {
+
+}
+
+#button-clear {
+
+}
+
+article {
+
+}
+
+#challenger-1-name {
+
+}
+
+#challenger-2-name {
+
+}
+
+#winner-name{
+
+}
+
+img {
+
+}
