@@ -15,9 +15,9 @@
       <form action="" class="input" id="form-top">
         <h4> Set Range </h4>
         <p class="form-info"> Min Range </p>
-        <input type="text" name="min-range" alt="range-paramaters"/>
+        <input type="number" name="min-range" alt="range-paramaters" min="0" max="99" step="1"/>
         <p class="form-info"> Max Range </p>
-        <input type="text" name="max-range" alt="range-paramaters"/>
+        <input type="number" name="max-range" alt="range-paramaters" min="1" max="100" step="1"/>
         <button class="update-button" name="update" alt="update-button"> UPDATE </button>
       </form>
       <form action="" class="input" id="form-bottom">
@@ -26,14 +26,14 @@
         <p class="form-info"> Name </p>
         <input class="input-name" type="text" name="challenger1-name" alt="challenger one name"/>
         <p class="form-info"> Guess </p>
-        <input class="input-guess" type="text" name="challenger1-guess" alt="challenger one guess"/>
+        <input class="input-guess" type="number" name="challenger1-guess" alt="challenger one guess" min="0" max="100" step="1"/>
         <h4> Challenger 2 </h4>
         <p class="form-info"> Name </p>
         <input class="input-name" type="text" name="challenger2-name" alt="challenger two name"/>
         <p class="form-info"> Guess </p>
-        <input class="input-guess" type="text" name="challenger2-guess" alt="challenger two guess"/>
-        <button id="button-submit" name="submit-guess" alt="submit guess button"> SUBMIT GUESS </button>
-        <button id="button-reset" name="reset-game" alt="reset game button"> RESET GAME </button>
+        <input class="input-guess" type="number" name="challenger2-guess" alt="challenger two guess" min="0" max="100" step="1"/>
+        <button type="submit" id="button-submit" name="submit-guess" alt="submit guess button"> SUBMIT GUESS </button>
+        <button type="reset" id="button-reset" name="reset-game" alt="reset game button"> RESET GAME </button>
         <button id="button-clear" name="clear-game" alt="clear game button"> CLEAR GAME </button>
       </form>
       <div>
@@ -65,7 +65,7 @@
         <div class="winner-card-footer">
           <p class="feedback"> <span class="span-feedback"> 47</span> GUESSES </p>
           <p class="feedback"> <span class="span-feedback"> 1.35 </span> MINUTES </p>
-          <img src="images/" alt="x out"/>
+          <button id="close-button"> x </button>
         </div>
       </article>
       <article>
@@ -79,7 +79,7 @@
         <div class="winner-card-footer">
           <p class="feedback"><span class="span-feedback"> 23 </span> GUESSES </p>
           <p class="feedback"> <span class="span-feedback"> .5 </span> MINUTES </p>
-          <img src="images/" alt="x out"/>
+          <button id="close-button"> x </button>
         </div>
       </article>
       <article>
@@ -87,13 +87,13 @@
           <p id="challenger-1-name"> CHALLENGER 1 NAME </p> 
           <p class="vs"> vs </p>
           <p id="challenger-2-name"> CHALLENGER 2 NAME </p>
-        <div>
+        </div>
         <h2 id="winner-name"> CHALLENGER 1 NAME </h2>
         <h2 class="winner-ticket"> WINNER </h2>
         <div class="winner-card-footer">
           <p class="feedback"> <span class="span-feedback">1675 </span> GUESSES </p>
           <p class="feedback"> <span class="span-feedback"> 3.5 </span> MINUTES </p>
-          <img src="images/" alt="x out"/>
+          <button id="close-button"> x </button>
         </div>
       </article>
     </section>
