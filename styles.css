@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  border: 1px solid red;
+  /*border: 1px solid red;*/
 }
 
 body {
@@ -62,6 +62,20 @@ form {
   padding: 10px;
 }
 
+.ranges {
+  display: flex;
+}
+
+.min-range-input {
+  display: block;
+  float: left;
+}
+
+.max-range-input {
+  display: block;
+  float: right;
+}
+
 p {
   margin: 0px;
 }
@@ -77,6 +91,8 @@ input {
 }
 
 #form-bottom {
+  /*display: flex;*/
+  flex-direction: column;
   height: 300px;
 }
 
@@ -85,6 +101,38 @@ h4 {
   font-size: 18px;
   font-weight: 700;
   margin: 1px;
+}
+
+.challenger-1-all {
+
+}
+
+.challenger-1-input-name {
+  float: left;
+}
+
+.chellenger-input-1-guess {
+  float: right;
+}
+
+.form-info-name {
+  display: block;
+}
+
+.challenger-2-all {
+
+}
+
+.challenger-2-input-name {
+  float: left;
+}
+
+.challenger-input-2-guess {
+  float: right;
+}
+
+.form-info-guess {
+  display: block;
 }
 
 .input-name {
@@ -139,6 +187,7 @@ h4 {
   font-size: 16px;
   height: 35px;
   margin: 5px;
+  margin-left: 25px;
   padding: 5px;
   width: 25%;
 }
