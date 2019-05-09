@@ -8,6 +8,8 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
+/*header start*/
+
 header {
   background-color: #404042;
   box-sizing: border-box;
@@ -42,9 +44,12 @@ h3 {
   z-index: 5;
 }
 
+/*header end */
+
+/*main body start*/
+
 main {
   display: flex;
-
 }
 
 .left {
@@ -58,10 +63,6 @@ form {
   border: 2px solid #AAAAAA;
   margin: 15px;
   padding: 10px;
-}
-
-.ranges {
-  display: flex;
 }
 
 .min-range-input {
@@ -84,6 +85,15 @@ input {
   width: 250px;
 }
 
+.update-button {
+  background-color: #808185;
+  border-radius: 20px;
+  color: white;
+  font-size: 16px;
+  height: 30px;
+  width: 100px;
+}
+
 #form-top {
   height: 150px;
 }
@@ -94,6 +104,11 @@ input {
   height: 300px;
 }
 
+.underline {
+  font-weight: 700;
+  text-decoration: underline;
+}
+
 h4 {
   color: #404042;
   font-size: 18px;
@@ -101,36 +116,34 @@ h4 {
   margin: 5px;
 }
 
-.challenger-1-all {
-
+/*.challenger-1-all {
+  display: flex;
 }
+*/
 
-.challenger-1-input-name {
+.challenger-input-name {
   float: left;
 }
 
-.chellenger-input-1-guess {
+/*.challenger-input-guess {
   float: right;
-}
+}*/
 
-.form-info-name {
+
+
+
+
+
+
+
+
+
+.form-info{
   display: block;
 }
 
-.challenger-2-all {
+.challenger-all {
   margin-bottom: 30px;
-}
-
-.challenger-2-input-name {
-  float: left;
-}
-
-.challenger-input-2-guess {
-  float: right;
-}
-
-.form-info-guess {
-  display: block;
 }
 
 .input-name {
@@ -146,26 +159,7 @@ h4 {
   width: 250px;
 }
 
-.update-button {
-  background-color: #808185;
-  border-radius: 20px;
-  color: white;
-  font-size: 16px;
-  height: 30px;
-  width: 100px;
-}
-
-.underline {
-  font-weight: 700;
-  text-decoration: underline;
-}
-
-.form-info {
-  display: block;
-  margin: 5px;
-}
-
-#button-submit {
+.button {
   background-color: #808185;
   border-radius: 20px;
   color: white;
@@ -178,61 +172,32 @@ h4 {
   width: 25%;
 }
 
-#button-reset {
-  background-color: #808185;
-  border-radius: 20px;
-  color: white;
-  display: inline-block;
-  font-size: 16px;
-  height: 35px;
-  margin: 5px;
-  margin-left: 25px;
-  margin-right: 25px;
-  padding: 5px;
-  width: 25%;
-}
-
-#button-clear {
-  background-color: #808185;
-  border-radius: 20px;
-  color: white;
-  display: inline-block;
-  font-size: 16px;
-  height: 35px;
-  margin: 5px;
-  padding: 5px;
-  width: 25%;
-}
-
-#latest-score-container {
+.latest-score-container {
   background-color: white;
   border: solid 2px #c1bfbf;
   color: #808185;
-  display: inline-block;
+  display: flex;
   height: 280px;
   margin: 15px; 
   padding: 10px; 
-  width: 680px;
 }
 
-#latest-score-left {
+.latest-score-left {
   border-right: solid 1px #c1bfbf;
   display: inline;
-  float: left;
+  flex: 1;
   height: 230px;
   margin-top: 10px;
   padding: 10px;
-  width: 328px;
 }
 
-#latest-score-right {
+.latest-score-right {
   border-left: solid 1px #c1bfbf;
   display: inline;
-  float: right;
+  flex: 1;
   height: 230px;
   margin-top: 10px;
   padding: 10px;
-  width: 328px;
 }
 
 .guess-challenger-name{
@@ -256,6 +221,10 @@ h4 {
   font-size: 90px;
   font-weight: 700;
   margin: 2px;
+  text-align: center;
+}
+
+.feedback-left{
   text-align: center;
 }
 
@@ -285,7 +254,7 @@ h4 {
   margin-bottom: 3px;
 }
 
-#challenger-1-name {
+.challenger-1-name {
   color: #6E6E6E;
   font-size: 12px; 
   font-weight: 700;
@@ -302,7 +271,7 @@ h4 {
   padding: 0px;
 }
 
-#challenger-2-name {
+.challenger-2-name {
   color: #6E6E6E;
   font-size: 12px; 
   font-weight: 700;
@@ -311,7 +280,7 @@ h4 {
   width: 33%;
 }
 
-#winner-name {
+.winner-name {
   border-top: 2px solid #ededed;
   padding-top: 15px;
   margin-bottom: 0px;
@@ -347,7 +316,7 @@ h4 {
   width: 33%;
 
 }
-#close-button {
+.close-button {
   color: #DADBDD;
   background-color: #6E6E6E;
   border-radius: 50%;
