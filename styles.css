@@ -8,6 +8,8 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
+/*header start*/
+
 header {
   background-color: #404042;
   box-sizing: border-box;
@@ -42,9 +44,12 @@ h3 {
   z-index: 5;
 }
 
+/*header end */
+
+/*main body start*/
+
 main {
   display: flex;
-
 }
 
 .left {
@@ -58,10 +63,6 @@ form {
   border: 2px solid #AAAAAA;
   margin: 15px;
   padding: 10px;
-}
-
-.ranges {
-  display: flex;
 }
 
 .min-range-input {
@@ -84,6 +85,15 @@ input {
   width: 250px;
 }
 
+.update-button {
+  background-color: #808185;
+  border-radius: 20px;
+  color: white;
+  font-size: 16px;
+  height: 30px;
+  width: 100px;
+}
+
 #form-top {
   height: 150px;
 }
@@ -94,6 +104,11 @@ input {
   height: 300px;
 }
 
+.underline {
+  font-weight: 700;
+  text-decoration: underline;
+}
+
 h4 {
   color: #404042;
   font-size: 18px;
@@ -101,36 +116,34 @@ h4 {
   margin: 5px;
 }
 
-.challenger-1-all {
-
+/*.challenger-1-all {
+  display: flex;
 }
+*/
 
-.challenger-1-input-name {
+.challenger-input-name {
   float: left;
 }
 
-.chellenger-input-1-guess {
+/*.challenger-input-guess {
   float: right;
-}
+}*/
 
-.form-info-name {
+
+
+
+
+
+
+
+
+
+.form-info{
   display: block;
 }
 
 .challenger-2-all {
   margin-bottom: 30px;
-}
-
-.challenger-2-input-name {
-  float: left;
-}
-
-.challenger-input-2-guess {
-  float: right;
-}
-
-.form-info-guess {
-  display: block;
 }
 
 .input-name {
@@ -146,24 +159,7 @@ h4 {
   width: 250px;
 }
 
-.update-button {
-  background-color: #808185;
-  border-radius: 20px;
-  color: white;
-  font-size: 16px;
-  height: 30px;
-  width: 100px;
-}
 
-.underline {
-  font-weight: 700;
-  text-decoration: underline;
-}
-
-.form-info {
-  display: block;
-  margin: 5px;
-}
 
 #button-submit {
   background-color: #808185;
@@ -256,6 +252,10 @@ h4 {
   font-size: 90px;
   font-weight: 700;
   margin: 2px;
+  text-align: center;
+}
+
+.feedback-left{
   text-align: center;
 }
 

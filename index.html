@@ -12,9 +12,8 @@
   </header>
   <main>
     <section class="left">
-      <form action="" class="input" id="form-top">
+      <form action="" id="form-top">
         <h4> Set Range </h4>
-       <!--  <div class="ranges"> -->
           <div class="min-range-input">
             <p class="form-info"> Min Range </p>
             <input type="number" name="min-range" alt="range-paramaters" min="0" max="99" step="1"/>
@@ -24,49 +23,61 @@
             <input type="number" name="max-range" alt="range-paramaters" min="1" max="100" step="1"/>
           </div>
           <button class="update-button" name="update" alt="update-button"> UPDATE </button>
-        <!-- </div> -->
         </form>
-      <form action="" class="input" id="form-bottom">
-        <p> The Current Range is <span class= "underline"> 1 </span> to <span class= "underline"> 100 </span> </p>
-        <h4> Challenger 1 </h4>
+
+
+
+
+
+
+
+
+
+
+
+
+        
+      <form action="" id="form-bottom">
+        <p> The Current Range is <span class="underline"> 1 </span> to <span class="underline"> 100 </span> </p>
+        <h4 class="p1-rename"> Challenger 1 </h4>
         <div class="challenger-1-all">
-          <div class="challenger-1-input-name">
-            <label class="form-info-name"> Name </label>
-            <input class="input-name" type="text" name="challenger1-name" alt="challenger one name"/>
+          <div class="challenger-input-name">
+            <label class="form-info"> Name </label>
+            <input class="input-name" id="name-1" type="text" name="challenger1-name" alt="challenger one name"/>
           </div>
-          <div class="challenger-1-input-guess">
-            <label class="form-info-guess"> Guess </label>
+          <div>
+            <label class="form-info"> Guess </label>
             <input class="input-guess" type="number" name="challenger1-guess" alt="challenger one guess" min="0" max="100" step="1"/>
           </div>
         </div>
         <h4> Challenger 2 </h4>
         <div class="challenger-2-all">
-          <div class="challenger-2-input-name">
-            <label class="form-info-name"> Name </label>
+          <div class="challenger-input-name">
+            <label class="form-info"> Name </label>
             <input class="input-name" type="text" name="challenger2-name" alt="challenger two name"/>
           </div>
-          <div class="challenger-2-input-guess">
-              <label class="form-info-guess"> Guess </label>
+          <div">
+              <label class="form-info"> Guess </label>
               <input class="input-guess" type="number" name="challenger2-guess" alt="challenger two guess" min="0" max="100" step="1"/>
           </div>
         </div>
-        <button id="button-submit" name="submit-guess" alt="submit guess button"> SUBMIT GUESS </button>
+        <button id="button-submit button" name="submit-guess" alt="submit guess button"> SUBMIT GUESS </button>
         <button id="button-reset" name="reset-game" alt="reset game button"> RESET GAME </button>
         <button id="button-clear" name="clear-game" alt="clear game button"> CLEAR GAME </button>
       </form>
       <div id="latest-score-container">
         <article class="latest-score" id="latest-score-left">
           <h4> Latest Score </h4>
-          <p class="guess-challenger-name"> Challenger 1 Name </p>
+          <p class="guess-challenger-name p1-rename"> Challenger 1 Name </p>
           <p class="current-guess-text"> current guess </p>
           <p class="previous-guess"> 97 </p>
-          <p class="feedback"> that's too high </p>
+          <p class="feedback-left"> that's too high </p>
         </article>
         <article class="latest-score" id="latest-score-right">
           <p class="guess-challenger-name" id="guess-challenger-name-right"> Challenger 2 Name </p>
           <p class="current-guess-text"> current guess </p>
           <p class="previous-guess"> 3 </p>
-          <p class="feedback"> that's too low </p>
+          <p class="feedback-left"> that's too low </p>
         </article>
       </div>
     </section>
