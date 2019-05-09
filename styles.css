@@ -22,7 +22,7 @@ header {
 h1 {
   border-bottom: 2px solid white;
   color: #DD1972;
-  display: block;
+  display: absolute;
   font-size: 50px;
   margin: 0px;
   margin-bottom: 10px;
@@ -40,7 +40,6 @@ h3 {
   font-size:; 
   font-weight: 300;
   margin-top: 1px;
-  text-decoration: line-through;
   z-index: 5;
 }
 
@@ -206,24 +205,35 @@ h4 {
   width: 25%;
 }
 
-.latest-score-container {
-  border: 2px solid #D0D1D3;
+#latest-score-container {
+  background-color: white;
+  border: solid 2px #c1bfbf;
+  color: #808185;
+  display: inline-block;
+  height: 280px;
+  margin: 15px; 
+  padding: 10px; 
+  width: 680px;
 }
 
 #latest-score-left {
+  border-right: solid 1px #c1bfbf;
+  display: inline;
   float: left;
-  height: 250px;
-  margin: 15px;
+  height: 230px;
+  margin-top: 10px;
   padding: 10px;
-  width: 45%;
+  width: 328px;
 }
 
 #latest-score-right {
+  border-left: solid 1px #c1bfbf;
+  display: inline;
   float: right;
-  height: 250px;
-  margin: 15px;
+  height: 230px;
+  margin-top: 10px;
   padding: 10px;
-  width: 45%;
+  width: 328px;
 }
 
 .guess-challenger-name{
@@ -264,7 +274,7 @@ h4 {
   width: 50%;
 }
 
-article {
+.cards {
   background-color: white;
   border: solid 2px #c1bfbf;
   color: #808185;
