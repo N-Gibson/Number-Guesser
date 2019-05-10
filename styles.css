@@ -52,9 +52,15 @@ main {
   display: flex;
 }
 
+.form-flex {
+  display: flex;
+}
+
 .left {
   background-color: #F7F7F7;
   border-right: 1px solid #404042;
+  display: flex;
+  flex-direction: column;
   width: 50%;
 }
 
@@ -65,15 +71,6 @@ form {
   padding: 10px;
 }
 
-.min-range-input {
-  display: inline-block;
-  float: left;
-}
-
-.max-range-input {
-  display: inline-block;
-}
-
 p {
   margin: 0px;
 }
@@ -82,7 +79,11 @@ input {
   display: inline;
   height: 35px;
   margin-right: 15px;
-  width: 250px;
+  width: 150px;
+}
+
+.min-max {
+  width: 150px;
 }
 
 .update-button {
@@ -90,7 +91,9 @@ input {
   border-radius: 20px;
   color: white;
   font-size: 16px;
+  font-weight: 700;
   height: 30px;
+  margin-top: 25px;
   width: 100px;
 }
 
@@ -132,10 +135,13 @@ h4 {
 
 
 
+.player-input {
+  display: flex;
+}
 
-
-
-
+.button-trio {
+  display: flex;
+}
 
 
 .form-info{
@@ -143,20 +149,22 @@ h4 {
 }
 
 .challenger-all {
+  display: flex;
   margin-bottom: 30px;
+
 }
 
 .input-name {
   display: inline-block;
   height: 35px; 
-  width: 350px;
+  width: 250px;
   /*margin-right: 20px;*/
 }
 
 .input-guess {
   display: inline-block;
   height: 35px;
-  width: 250px;
+  width: 150px;
 }
 
 .button {
@@ -164,12 +172,12 @@ h4 {
   border-radius: 20px;
   color: white;
   display: inline-block;
+  font-weight: 700;
   font-size: 16px;
   height: 35px;
   margin: 5px;
   margin-left: 30px;
   padding: 5px;
-  width: 25%;
 }
 
 .latest-score-container {

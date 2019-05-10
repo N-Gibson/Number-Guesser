@@ -1,6 +1,6 @@
-// var userMin = document.getElementbyId('lower-range').value;
-// var userMax = document.getElementbyId('upper-range').value;
-// var setRange = document.getElementbyId('range-button');
+var userMin = document.getElementbyId('lower-range').value;
+var userMax = document.getElementbyId('upper-range').value;
+var setRange = document.getElementbyId('range-button');
 var p1NameInput = document.getElementbyId('name-1');
 var p1Name = document.querySelector('.p1-rename');
 var submitGuesses = document.getElementbyId('button-submit');
@@ -12,11 +12,21 @@ var submitGuesses = document.getElementbyId('button-submit');
 // var randomNumber;
 
 
-// function generateNumber (max, min){
-//   return Math.floor(Math.random() * (+max - +min) + +min); 
-// }
 
-// randomNumber = generateNumber(userMax, userMin);
+
+
+
+function generateNumber (max, min){
+  return Math.floor(Math.random() * (+max - +min) + +min); 
+}
+
+randomNumber = generateNumber(userMax, userMin);
+
+
+
+
+
+
 
 changeP1Name.addEventListener('click' function(){
   var p1 = p1NameInput.value;

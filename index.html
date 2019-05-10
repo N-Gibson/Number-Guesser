@@ -14,43 +14,47 @@
     <section class="left">
       <form action="" id="form-top">
         <h4> Set Range </h4>
-        <div class="min-range-input">
-          <p class="form-info"> Min Range </p>
-          <input type="number" name="min-range" alt="range-paramaters" min="0" max="99" step="1"/>
+        <div class="form-flex">
+          <div>
+            <p class="form-info"> Min Range </p>
+            <input class="min-max" type="number" name="min-range" alt="range-paramaters" min="0" max="99" step="1"/>
+          </div>
+          <div class="max-range-input">
+            <label class="form-info"> Max Range </label>
+            <input class="min-max" type="number" name="max-range" alt="range-paramaters" min="1" max="100" step="1"/>
+          </div>
+          <button class="update-button" name="update" alt="update-button"> UPDATE </button>
         </div>
-        <div class="max-range-input">
-          <label class="form-info"> Max Range </label>
-          <input type="number" name="max-range" alt="range-paramaters" min="1" max="100" step="1"/>
-        </div>
-        <button class="update-button" name="update" alt="update-button"> UPDATE </button>
       </form>
       <form action="">
-        <p> The Current Range is <span class="underline"> 1 </span> to <span class="underline"> 100 </span> </p>
-        <h4 class="p1-rename"> Challenger 1 </h4>
-        <div class="challenger-all">
-          <div class="challenger-input-name">
-            <label class="form-info"> Name </label>
-            <input class="input-name" id="name-1" type="text" name="challenger1-name" alt="challenger one name"/>
+        <p> The Current Range is <span class="underline"> 1 </span> to<span class="underline"> 100 </span> </p>
+          <h4 class="p1-rename"> Challenger 1 </h4>
+          <div class="challenger-all">
+            <div class="challenger-input-name">
+              <label class="form-info"> Name </label>
+              <input class="input-name" id="name-1" type="text" name="challenger1-name" alt="challenger one name"/>
+            </div>
+            <div>
+              <label class="form-info"> Guess </label>
+              <input class="input-guess" type="number" name="challenger1-guess" alt="challenger one guess" min="0" max="100" step="1"/>
+            </div>
           </div>
-          <div>
-            <label class="form-info"> Guess </label>
-            <input class="input-guess" type="number" name="challenger1-guess" alt="challenger one guess" min="0" max="100" step="1"/>
+          <h4> Challenger 2 </h4>
+          <div class="challenger-all">
+            <div class="challenger-input-name">
+              <label class="form-info"> Name </label>
+              <input class="input-name" type="text" name="challenger2-name" alt="challenger two name"/>
+            </div>
+            <div">
+              <label class="form-info"> Guess </label>
+              <input class="input-guess" type="number" name="challenger2-guess" alt="challenger two guess" min="0" max="100" step="1"/>
+            </div>
+          <div class="button-trio">
+            <button class="button" id="button-submit" name="submit-guess" alt="submit guess button"> SUBMIT GUESS </button>
+            <button class="button" id="button-reset" name="reset-game" alt="reset game button"> RESET GAME </button>
+            <button class="button" id="button-clear" name="clear-game" alt="clear game button"> CLEAR GAME </button>
           </div>
         </div>
-        <h4> Challenger 2 </h4>
-        <div class="challenger-all">
-          <div class="challenger-input-name">
-            <label class="form-info"> Name </label>
-            <input class="input-name" type="text" name="challenger2-name" alt="challenger two name"/>
-          </div>
-          <div">
-            <label class="form-info"> Guess </label>
-            <input class="input-guess" type="number" name="challenger2-guess" alt="challenger two guess" min="0" max="100" step="1"/>
-          </div>
-        </div>
-        <button class="button" id="button-submit" name="submit-guess" alt="submit guess button"> SUBMIT GUESS </button>
-        <button class="button" id="button-reset" name="reset-game" alt="reset game button"> RESET GAME </button>
-        <button class="button" id="button-clear" name="clear-game" alt="clear game button"> CLEAR GAME </button>
       </form>
       <div class="latest-score-container">
         <article class="latest-score-left">
@@ -113,5 +117,6 @@
       </article>
     </section>
   </main>
+  <script type="text/javascript" src="main.js"></script>
 </body>
 </html>
