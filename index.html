@@ -17,13 +17,13 @@
         <div class="form-flex">
           <div>
             <p class="form-info"> Min Range </p>
-            <input class="min-max" type="number" name="min-range" alt="range-paramaters" min="0" max="99" step="1"/>
+            <input id="lower-range" class="min-max" type="number" name="min-range" alt="range-paramaters" min="0" max="99" step="1"/>
           </div>
           <div class="max-range-input">
             <label class="form-info"> Max Range </label>
-            <input class="min-max" type="number" name="max-range" alt="range-paramaters" min="1" max="100" step="1"/>
+            <input id="upper-range" class="min-max" type="number" name="max-range" alt="range-paramaters" min="1" max="100" step="1"/>
           </div>
-          <button class="update-button" name="update" alt="update-button"> UPDATE </button>
+          <button id="range-button" class="update-button" name="update" alt="update-button"> UPDATE </button>
         </div>
       </form>
       <form action="">
@@ -36,18 +36,18 @@
             </div>
             <div>
               <label class="form-info"> Guess </label>
-              <input class="input-guess" type="number" name="challenger1-guess" alt="challenger one guess" min="0" max="100" step="1"/>
+              <input id="guess-1"class="input-guess" type="number" name="challenger1-guess" alt="challenger one guess" min="0" max="100" step="1"/>
             </div>
           </div>
           <h4> Challenger 2 </h4>
           <div class="challenger-all">
             <div class="challenger-input-name">
               <label class="form-info"> Name </label>
-              <input class="input-name" type="text" name="challenger2-name" alt="challenger two name"/>
+              <input id="name-2" class="input-name" type="text" name="challenger2-name" alt="challenger two name"/>
             </div>
             <div">
               <label class="form-info"> Guess </label>
-              <input class="input-guess" type="number" name="challenger2-guess" alt="challenger two guess" min="0" max="100" step="1"/>
+              <input id="guess-2" class="input-guess" type="number" name="challenger2-guess" alt="challenger two guess" min="0" max="100" step="1"/>
             </div>
           <div class="button-trio">
             <button class="button" id="button-submit" name="submit-guess" alt="submit guess button"> SUBMIT GUESS </button>

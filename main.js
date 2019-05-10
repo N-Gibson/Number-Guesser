@@ -1,19 +1,15 @@
 var userMin = document.getElementbyId('lower-range').value;
 var userMax = document.getElementbyId('upper-range').value;
 var setRange = document.getElementbyId('range-button');
-var p1NameInput = document.getElementbyId('name-1');
-var p1Name = document.querySelector('.p1-rename');
+var p1NameInput = document.getElementbyId('name-1').value;
+// var p1Name = document.querySelector('.p1-rename');
 var submitGuesses = document.getElementbyId('button-submit');
-// var p1Guess = document.getElementbyId('guess1').value;
-// var p2Name = document.getElementbyId('name2').value;
-// var p2Guess = document.getElementbyId('guess2').value;
-// var resetAll = document.getElementybyId('button-reset');
-// var clearGame = document.getElementbyId('button-clear');
-// var randomNumber;
-
-
-
-
+var p1Guess = document.getElementbyId('guess-1').value;
+var p2Name = document.getElementbyId('name-2').value;
+var p2Guess = document.getElementbyId('guess-2').value;
+var resetAll = document.getElementybyId('button-reset');
+var clearGame = document.getElementbyId('button-clear');
+var randomNumber;
 
 
 function generateNumber (max, min){
@@ -21,9 +17,6 @@ function generateNumber (max, min){
 }
 
 randomNumber = generateNumber(userMax, userMin);
-
-
-
 
 
 
