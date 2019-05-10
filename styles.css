@@ -3,45 +3,47 @@
 }
 
 body {
+  font-family: 'Open Sans', sans-serif;
   height: 100%;
   width: 100%;
-  font-family: 'Open Sans', sans-serif;
 }
 
 /*header start*/
 
 header {
+  align-items: center;
   background-color: #404042;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
   height: 150px;
-  margin: 0px;
-  padding: 0px;
-  text-align: center;
-  width: 100%;
+  justify-content: center;
 }
 
 h1 {
-  border-bottom: 2px solid white;
   color: #DD1972;
-  display: absolute;
   font-size: 50px;
   margin: 0px;
-  margin-bottom: 10px;
-  padding: 0px;
-  z-index: 1;
 }
 
-.skinny-font{
+.skinny-font {
   font-weight: 300;
+}
+
+h3:after, h3:before {
+  border-bottom: 2px solid white;
+  content: "";
+  flex: 1 1;
+  margin: 10px;
+  width: 65px;
 }
 
 h3 {
   color: white;
-  display: absolute;
-  font-size:; 
+  display: flex;
+  flex-direction: row;
   font-weight: 300;
   margin-top: 1px;
-  z-index: 5;
 }
 
 /*header end */
@@ -52,26 +54,23 @@ main {
   display: flex;
 }
 
+.form-flex {
+  display: flex;
+}
+
 .left {
   background-color: #F7F7F7;
   border-right: 1px solid #404042;
+  display: flex;
+  flex-direction: column;
   width: 50%;
 }
 
 form {
   background-color: white;
   border: 2px solid #AAAAAA;
-  margin: 15px;
   padding: 10px;
-}
-
-.min-range-input {
-  display: inline-block;
-  float: left;
-}
-
-.max-range-input {
-  display: inline-block;
+  margin: 15px;
 }
 
 p {
@@ -82,6 +81,10 @@ input {
   display: inline;
   height: 35px;
   margin-right: 15px;
+  width: 150px;
+}
+
+.min-max {
   width: 250px;
 }
 
@@ -90,8 +93,10 @@ input {
   border-radius: 20px;
   color: white;
   font-size: 16px;
+  font-weight: 700;
   height: 30px;
-  width: 100px;
+  margin-top: 25px;
+  width: 120px;
 }
 
 #form-top {
@@ -99,7 +104,6 @@ input {
 }
 
 #form-bottom {
-  /*display: flex;*/
   flex-direction: column;
   height: 300px;
 }
@@ -116,33 +120,24 @@ h4 {
   margin: 5px;
 }
 
-/*.challenger-1-all {
-  display: flex;
-}
-*/
-
 .challenger-input-name {
   float: left;
 }
 
-/*.challenger-input-guess {
-  float: right;
-}*/
+.player-input {
+  display: flex;
+}
 
-
-
-
-
-
-
-
-
+.button-trio {
+  display: flex;
+}
 
 .form-info{
   display: block;
 }
 
 .challenger-all {
+  display: flex;
   margin-bottom: 30px;
 }
 
@@ -150,7 +145,6 @@ h4 {
   display: inline-block;
   height: 35px; 
   width: 350px;
-  /*margin-right: 20px;*/
 }
 
 .input-guess {
@@ -164,12 +158,13 @@ h4 {
   border-radius: 20px;
   color: white;
   display: inline-block;
+  font-weight: 700;
   font-size: 16px;
   height: 35px;
   margin: 5px;
-  margin-left: 30px;
+  margin: 10px;
   padding: 5px;
-  width: 25%;
+  width: 200px;
 }
 
 .latest-score-container {
@@ -183,7 +178,7 @@ h4 {
 }
 
 .latest-score-left {
-  border-right: solid 1px #c1bfbf;
+  border-right: solid 2px #c1bfbf;
   display: inline;
   flex: 1;
   height: 230px;
@@ -192,11 +187,10 @@ h4 {
 }
 
 .latest-score-right {
-  border-left: solid 1px #c1bfbf;
   display: inline;
   flex: 1;
   height: 230px;
-  margin-top: 10px;
+  margin-top: 18px;
   padding: 10px;
 }
 
@@ -212,8 +206,8 @@ h4 {
 }
 
 .current-guess-text {
-  text-align: center;
   margin: 2px;
+  text-align: center;
 }
 
 .previous-guess {
@@ -264,11 +258,11 @@ h4 {
 
 .vs {
   font-size: 12px;
-  text-align: center;
-  width: 5%;
   margin-left: 0px;
   margin-right: 0px;
   padding: 0px;
+  text-align: center;
+  width: 5%;
 }
 
 .challenger-2-name {
