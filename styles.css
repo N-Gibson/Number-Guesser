@@ -85,7 +85,7 @@ input {
 }
 
 .min-max {
-  width: 150px;
+  width: 250px;
 }
 
 .update-button {
@@ -96,7 +96,7 @@ input {
   font-weight: 700;
   height: 30px;
   margin-top: 25px;
-  width: 100px;
+  width: 120px;
 }
 
 #form-top {
@@ -144,13 +144,13 @@ h4 {
 .input-name {
   display: inline-block;
   height: 35px; 
-  width: 250px;
+  width: 350px;
 }
 
 .input-guess {
   display: inline-block;
   height: 35px;
-  width: 150px;
+  width: 250px;
 }
 
 .button {
@@ -162,8 +162,9 @@ h4 {
   font-size: 16px;
   height: 35px;
   margin: 5px;
-  margin-left: 30px;
+  margin: 10px;
   padding: 5px;
+  width: 200px;
 }
 
 .latest-score-container {
