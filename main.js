@@ -38,19 +38,35 @@ var p2guess = document.getElementById('guess-2');
 var submitButton = document.getElementById('button-submit');
 var p1Everywhere = document.querySelectorAll('.p1-rename');
 var p2Everywhere = document.querySelectorAll('.p2-rename');
+var p1GuessEverywhere = document.getElementById('p1-guess-id');
+var p2GuessEverywhere = document.getElementById('p2-guess-id');
 
-submitButton.addEventListener('click', compareGuesses);
 
-function compareGuesses (){
+//start update names//
+
+submitButton.addEventListener('click', updateAllNames);
+
+function updateAllNames (){
   event.preventDefault();
-  // p1Everywhere = [];
   for (var i = 0; i < p1Everywhere.length; i++){
     p1Everywhere[i].innerText = p1name.value;
   };
-  // p2Everywhere = [];
-  for (var i = 0; i <p2Everywhere.length; i++){
+  for (var i = 0; i < p2Everywhere.length; i++){
     p2Everywhere[i].innerText = p2name.value;
-  };
+  }; 
 };
 
+//end update names//
+
+//start update guesses//
+
+submitButton.addEventListener('click', updateAllGuesses);
+
+function updateAllGuesses (){
+  event.preventDefault();
+  p1GuessEverywhere.innerText = p1guess.value;
+  p2GuessEverywhere.innerText = p2guess.value;
+}; 
+
+//end update guesses//
 
