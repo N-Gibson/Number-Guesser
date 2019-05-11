@@ -1,5 +1,5 @@
 function generateRandomNumber(min,max) {
-  var randomNumber = Math.floor(Math.random() * (max - min) + 1);
+  var randomNumber = Math.floor(Math.random() * (max - min) + min);
   console.log(randomNumber);
 };
 
@@ -18,5 +18,5 @@ updateButton.addEventListener('click', function (){
   event.preventDefault();
   displayMinNumber.innerText = userMin.value;
   displayMaxNumber.innerText = userMax.value;
-  generateRandomNumber(userMin.value, userMax.value);
+  generateRandomNumber(Number(userMin.value),Number(userMax.value));
 });
