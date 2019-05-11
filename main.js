@@ -87,5 +87,68 @@ function resetGuessFields (){
 //end reset button//
 
 
+//start clear button-fields//
+
+var clearAll = document.querySelectorAll('.all');
+var clearAllButton = document.getElementById('button-clear');
+
+// clearAllButton.addEventListener('click', clearAllFields);
+
+// function clearAllFields (){
+//  event.preventDefault();
+//  for (var i = 0; i < clearAll.length; i++){
+//   clearAll[i].value = '';
+//   };
+// };
+
+//end clear button-fields//
 
 
+//start clear button-revert//
+
+
+
+
+var clearInput = document.querySelectorAll('.clear');
+var revertName1 = document.querySelectorAll('.rev-name1');
+var revertName2 = document.querySelectorAll('.rev-name2');
+var revertGuesses = document.querySelectorAll('.rev-guesses');
+
+clearAllButton.addEventListener('click', emptyAllFields);
+
+function emptyAllFields (){
+  event.preventDefault();
+  for (var i = 0; i < clearInput.length; i++){
+   clearInput[i].value = '';
+  };
+};
+
+
+
+
+clearAllButton.addEventListener('click', challenger1Revert);
+
+function challenger1Revert(){
+  event.preventDefault();
+  for (var i = 0; i < revertName1.length; i++){
+    revertName1[i].value = 'Challenger 1';
+  };
+};
+
+clearAllButton.addEventListener('click', challenger2Revert);
+
+function challenger2Revert(){
+  event.preventDefault();
+  for (var i = 0; i < revertName2.length; i++){
+    revertName2[i].value = 'Challenger 2';
+  };
+};
+
+clearAllButton.addEventListener('click', guessesRevert);
+
+function guessesRevert(){
+  event.preventDefault();
+  for (var i = 0; i < revertGuesses.length; i++){
+    revertGuesses[i].value = '00';
+  };
+};

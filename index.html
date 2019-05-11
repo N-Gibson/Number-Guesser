@@ -17,37 +17,37 @@
         <div class="form-flex">
           <div>
             <p class="form-info"> Min Range </p>
-            <input id="lower-range" class="min-max" type="number" name="min-range" alt="range-paramaters"/>
+            <input id="lower-range" class="all min-max clear" type="number" name="min-range" alt="range-paramaters"/>
           </div>
           <div class="max-range-input">
             <label class="form-info"> Max Range </label>
-            <input id="upper-range" class="min-max" type="number" name="max-range" alt="range-paramaters"/>
+            <input id="upper-range" class="all min-max clear" type="number" name="max-range" alt="range-paramaters"/>
           </div>
           <button id="range-button" class="update-button" name="update" alt="update-button"> UPDATE </button>
         </div>
       </form>
       <form action="">
         <p> The Current Range is <span id="display-min" class="underline"> 1 </span> to <span id="display-max" class="underline">100 </span> </p>
-          <h4 class="p1-rename"> Challenger 1 </h4>
+          <h4 class="p1-rename rev-name1"> Challenger 1 </h4>
           <div class="challenger-all">
             <div class="challenger-input-name">
               <label class="form-info"> Name </label>
-              <input class="input-name" id="name-1" type="text" name="challenger1-name" alt="challenger one name"/>
+              <input class="all input-name clear" id="name-1" type="text" name="challenger1-name" alt="challenger one name"/>
             </div>
             <div>
               <label class="form-info"> Guess </label>
-              <input id="guess-1" class="input-guess" type="number" name="challenger1-guess" alt="challenger one guess"/>
+              <input id="guess-1" class="all input-guess clear" type="number" name="challenger1-guess" alt="challenger one guess"/>
             </div>
           </div>
-          <h4 class="p2-rename"> Challenger 2 </h4>
+          <h4 class="p2-rename rev-name2"> Challenger 2 </h4>
           <div class="challenger-all">
             <div class="challenger-input-name">
               <label class="form-info"> Name </label>
-              <input id="name-2" class="input-name" type="text" name="challenger2-name" alt="challenger two name"/>
+              <input id="name-2" class="all input-name clear" type="text" name="challenger2-name" alt="challenger two name"/>
             </div>
             <div">
               <label class="form-info"> Guess </label>
-              <input id="guess-2" class="input-guess" type="number" name="challenger2-guess" alt="challenger two guess"/>
+              <input id="guess-2" class="all input-guess clear" type="number" name="challenger2-guess" alt="challenger two guess"/>
             </div>
           <div class="button-trio">
             <button class="button" id="button-submit" name="submit-guess" alt="submit guess button"> SUBMIT GUESS </button>
@@ -59,15 +59,15 @@
       <div class="latest-score-container">
         <article class="latest-score-left">
           <h4> Latest Score </h4>
-          <p class="guess-challenger-name p1-rename"> Challenger 1 Name </p>
+          <p class="guess-challenger-name p1-rename rev-name1"> Challenger 1 Name </p>
           <p class="current-guess-text"> current guess </p>
-          <p id="p1-guess-id" class="previous-guess"> 97 </p>
+          <p id="p1-guess-id" class="previous-guess rev-guesses"> 97 </p>
           <p class="feedback-left"> that's too high </p>
         </article>
         <article class="latest-score-right">
-          <p class="guess-challenger-name p2-rename"> Challenger 2 Name </p>
+          <p class="guess-challenger-name p2-rename rev-name2"> Challenger 2 Name </p>
           <p class="current-guess-text"> current guess </p>
-          <p id="p2-guess-id" class="previous-guess"> 3 </p>
+          <p id="p2-guess-id" class="previous-guess rev-guesses"> 3 </p>
           <p class="feedback-left"> that's too low </p>
         </article>
       </div>
