@@ -70,3 +70,22 @@ function updateAllGuesses (){
 
 //end update guesses//
 
+
+//start reset button-just guesses//
+
+var resetGuess = document.querySelectorAll('.input-guess');
+var resetGuessButton = document.getElementById('button-reset');
+
+resetGuessButton.addEventListener('click', resetGuessFields);
+
+function resetGuessFields (){
+ event.preventDefault();
+ for (var i = 0; i < resetGuess.length; i++){
+  resetGuess[i].value = '';
+  };
+};
+//end reset button//
+
+
+
+
