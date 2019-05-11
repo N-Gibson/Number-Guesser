@@ -40,7 +40,7 @@ setRange.addEventListener('click', function(){
     randomNumber = Math.floor(Math.random() * (max - min) + min + 1)
     console.log(randomNumber)
   }
-})
+});
 
 
 
