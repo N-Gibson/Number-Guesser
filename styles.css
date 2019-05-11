@@ -387,19 +387,6 @@ h4 {
     display: block;
   }
 
-@media (max-width: 685px){
-
-  main {
-    flex-wrap: wrap;
-  }
-
-  .right {
-    flex-wrap: wrap;
-  }
-
-  .cards {
-    flex-wrap: wrap;
-  }
-}
+/*@media (max-width: 685px){
 
 
