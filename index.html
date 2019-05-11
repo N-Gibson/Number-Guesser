@@ -17,11 +17,11 @@
         <div class="form-flex">
           <div>
             <p class="form-info"> Min Range </p>
-            <input id="lower-range" class="min-max" type="number" name="min-range" alt="range-paramaters" min="0" max="99" step="1"/>
+            <input id="lower-range" class="min-max" type="number" name="min-range" alt="range-paramaters"/>
           </div>
           <div class="max-range-input">
             <label class="form-info"> Max Range </label>
-            <input id="upper-range" class="min-max" type="number" name="max-range" alt="range-paramaters" min="1" max="100" step="1"/>
+            <input id="upper-range" class="min-max" type="number" name="max-range" alt="range-paramaters"/>
           </div>
           <button id="range-button" class="update-button" name="update" alt="update-button"> UPDATE </button>
         </div>
@@ -36,10 +36,10 @@
             </div>
             <div>
               <label class="form-info"> Guess </label>
-              <input id="guess-1"class="input-guess" type="number" name="challenger1-guess" alt="challenger one guess" min="0" max="100" step="1"/>
+              <input id="guess-1"class="input-guess" type="number" name="challenger1-guess" alt="challenger one guess"/>
             </div>
           </div>
-          <h4> Challenger 2 </h4>
+          <h4 class="p2-rename"> Challenger 2 </h4>
           <div class="challenger-all">
             <div class="challenger-input-name">
               <label class="form-info"> Name </label>
@@ -47,7 +47,7 @@
             </div>
             <div">
               <label class="form-info"> Guess </label>
-              <input id="guess-2" class="input-guess" type="number" name="challenger2-guess" alt="challenger two guess" min="0" max="100" step="1"/>
+              <input id="guess-2" class="input-guess" type="number" name="challenger2-guess" alt="challenger two guess"/>
             </div>
           <div class="button-trio">
             <button class="button" id="button-submit" name="submit-guess" alt="submit guess button"> SUBMIT GUESS </button>
@@ -65,7 +65,7 @@
           <p class="feedback-left"> that's too high </p>
         </article>
         <article class="latest-score-right">
-          <p class="guess-challenger-name" id="guess-challenger-name-right"> Challenger 2 Name </p>
+          <p class="guess-challenger-name p2-rename"> Challenger 2 Name </p>
           <p class="current-guess-text"> current guess </p>
           <p class="previous-guess"> 3 </p>
           <p class="feedback-left"> that's too low </p>
