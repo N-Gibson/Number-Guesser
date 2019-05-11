@@ -1,3 +1,5 @@
+// generateRandomNumber(Number(userMin.value),Number(userMax.value));
+
 function generateRandomNumber(min,max) {
   var randomNumber = Math.floor(Math.random() * (max - min) + min);
   console.log(randomNumber);

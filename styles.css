@@ -326,3 +326,67 @@ h4 {
   text-align: center;
   margin-left: 60px;
 }
+
+/*Media Query*/
+
+@media (max-width: 1350px) {
+  .min-max {
+    width: 210px;
+  }
+
+  .input-name{
+    width: 210px;
+  }
+
+  .input-guess {
+    width: 210px;
+  }
+
+  .form-flex{
+    flex-wrap: wrap;
+  }
+
+  .update-button {
+    width: 200px;
+    margin-top: 5px;
+    margin-left: 110px;
+  }
+
+@media (max-width: 1025px) {
+
+  #form-top{
+    display: flex;
+    flex-wrap: wrap;
+    height: 300px;
+  }
+
+  .update-button {
+    margin-left: 0px;
+  }
+
+  .middle-box {
+    display: flex;
+    flex-wrap: wrap;
+    height: 550px;
+  }
+
+  .challenger-all {
+    flex-wrap: wrap;
+  }
+
+  .button-trio {
+    flex-wrap: wrap;
+  }
+
+  .p-style {
+    flex-wrap: wrap;
+  }
+
+  .p1-rename{
+    flex-wrap: wrap;
+    display: block;
+  }
+
+/*@media (max-width: 685px){
+
+
