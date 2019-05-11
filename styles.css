@@ -88,6 +88,14 @@ input {
   width: 250px;
 }
 
+button:hover:enabled {
+  background-color: #DD1972;
+}
+
+button:disabled {
+
+}
+
 .update-button {
   background-color: #808185;
   border-radius: 20px;
