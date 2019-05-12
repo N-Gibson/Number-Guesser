@@ -149,28 +149,22 @@ function numAfterClick (){
 
 userMin.addEventListener('keyup', enableUpdate);
 userMax.addEventListener('keyup', enableUpdate);
-p1name.addEventListener('keyup', enableSubmit);
-p2name.addEventListener('keyup', enableSubmit);
-p1guess.addEventListener('keyup', enableSubmit);
-p2guess.addEventListener('keyup', enableSubmit);
+p1name.addEventListener('keyup', enableSRC);
+p2name.addEventListener('keyup', enableSRC);
+p1guess.addEventListener('keyup', enableSRC);
+p2guess.addEventListener('keyup', enableSRC);
 
 function enableUpdate (){
   event.preventDefault();
   document.getElementById('range-button').disabled = false;
 };
 
-function enableSubmit (){
+function enableSRC (){
   event.preventDefault();
   document.getElementById('button-submit').disabled = false;
-};
-
-function enableReset (){
-  event.preventDefault();
   document.getElementById('button-reset').disabled = false;
+  document.getElementById('button-clear').disabled = false;
 };
-
-
-
 
 //end button enabling//
 
