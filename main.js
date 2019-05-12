@@ -133,3 +133,19 @@ function guessesRevert (){
     revertGuesses[i].innerText = '00';
   };
 };
+
+clearAllButton.addEventListener('click', numAfterClick);
+
+function numAfterClick (){
+  event.preventDefault();
+  generateRandomNumber(minAutomatic, maxAutomatic);
+  displayMinNumber.innerText = 1;
+  displayMaxNumber.innerText = 100;
+  };
+  
+  // end clear button //
+
+  // start current game feedback //
+
+  
+
