@@ -93,7 +93,7 @@ button:hover:enabled {
 }
 
 button:disabled {
-
+  background-color: #D1D2D4;
 }
 
 .update-button {
