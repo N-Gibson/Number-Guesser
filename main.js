@@ -143,5 +143,9 @@ function numAfterClick (){
   displayMaxNumber.innerText = 100;
   };
   
+  // end clear button //
 
+  // start current game feedback //
+
+  
 
