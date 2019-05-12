@@ -1,14 +1,14 @@
 // generateRandomNumber(Number(userMin.value),Number(userMax.value));
-
+var randomNumber;
 function generateRandomNumber(min,max) {
-  var randomNumber = Math.floor(Math.random() * (max - min) + min);
-  console.log(randomNumber);
+  return randomNumber = Math.floor(Math.random() * (max - min) + min);
 };
 
 var minAutomatic = 1;
 var maxAutomatic = 100;
 
-generateRandomNumber (minAutomatic, maxAutomatic);
+generateRandomNumber(minAutomatic, maxAutomatic);
+console.log(randomNumber);
 
 //end random number generator//
 
@@ -22,11 +22,12 @@ var displayMaxNumber = document.getElementById('display-max');
 
 updateButton.addEventListener('click', rangeGenerator);
 
-function rangeGenerator (){
+function rangeGenerator(){
   event.preventDefault();
   displayMinNumber.innerText = userMin.value;
   displayMaxNumber.innerText = userMax.value;
-  generateRandomNumber (Number(userMin.value), Number(userMax.value));
+  generateRandomNumber(Number(userMin.value), Number(userMax.value));
+  console.log(randomNumber)
 };
 
 //end set range//
@@ -68,6 +69,8 @@ function updateAllGuesses (){
   event.preventDefault();
   p1GuessEverywhere.innerText = p1guess.value;
   p2GuessEverywhere.innerText = p2guess.value;
+  liveFeedback1();
+  liveFeedback2();
 }; 
 
 //end update guesses//
@@ -154,12 +157,12 @@ p2name.addEventListener('keyup', enableSRC);
 p1guess.addEventListener('keyup', enableSRC);
 p2guess.addEventListener('keyup', enableSRC);
 
-function enableUpdate (){
+function enableUpdate(){
   event.preventDefault();
   document.getElementById('range-button').disabled = false;
 };
 
-function enableSRC (){
+function enableSRC(){
   event.preventDefault();
   document.getElementById('button-submit').disabled = false;
   document.getElementById('button-reset').disabled = false;
@@ -171,6 +174,30 @@ function enableSRC (){
 
 
 //start current game feedback//
+var feedback1Text = document.getElementById('feedback1');
+var feedback2Text = document.getElementById('feedback2');
 
-  
+
+function liveFeedback1(){
+  // event.preventDefault();
+  if (Number(p1guess.value) === randomNumber){ 
+    feedback1Text.innerText = ('Boom!!!');
+  } else if (Number(p1guess.value) < randomNumber){ 
+    feedback1Text.innerText = ('That is too low!');
+  } else {
+    feedback1Text.innerText = ('That is too high!');
+  }
+};
+
+
+
+function liveFeedback2(){
+  if (Number(p2guess.value) === randomNumber){
+    feedback2Text.innerText = ('Boom!!!');
+  } else if (Number(p2guess.value) < randomNumber){
+    feedback2Text.innerText = ('That is too low!');
+  } else {
+    feedback2Text.innerText = ('That is too high!');
+  }
+};
 
