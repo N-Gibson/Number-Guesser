@@ -143,9 +143,40 @@ function numAfterClick (){
   displayMaxNumber.innerText = 100;
   };
   
-  // end clear button //
+//end clear button//
 
-  // start current game feedback //
+//start button enabling//
+
+userMin.addEventListener('keyup', enableUpdate);
+userMax.addEventListener('keyup', enableUpdate);
+p1name.addEventListener('keyup', enableSubmit);
+p2name.addEventListener('keyup', enableSubmit);
+p1guess.addEventListener('keyup', enableSubmit);
+p2guess.addEventListener('keyup', enableSubmit);
+
+function enableUpdate (){
+  event.preventDefault();
+  document.getElementById('range-button').disabled = false;
+};
+
+function enableSubmit (){
+  event.preventDefault();
+  document.getElementById('button-submit').disabled = false;
+};
+
+function enableReset (){
+  event.preventDefault();
+  document.getElementById('button-reset').disabled = false;
+};
+
+
+
+
+//end button enabling//
+
+
+
+//start current game feedback//
 
   
 
