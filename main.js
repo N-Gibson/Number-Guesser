@@ -190,7 +190,6 @@ function liveFeedback1(){
 };
 
 
-
 function liveFeedback2(){
   if (Number(p2guess.value) === randomNumber){
     feedback2Text.innerText = ('Boom!!!');
@@ -200,4 +199,5 @@ function liveFeedback2(){
     feedback2Text.innerText = ('That is too high!');
   }
 };
+
 
