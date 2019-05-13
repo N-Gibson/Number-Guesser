@@ -87,6 +87,7 @@ function resetGuessFields (){
  event.preventDefault();
  for (var i = 0; i < resetGuess.length; i++){
   resetGuess[i].value = '';
+  generateRandomNumber(minAutomatic, maxAutomatic);
   };
 };
 //end reset button//
@@ -179,25 +180,49 @@ var feedback2Text = document.getElementById('feedback2');
 
 
 function liveFeedback1(){
-  // event.preventDefault();
-  if (Number(p1guess.value) === randomNumber){ 
-    feedback1Text.innerText = ('Boom!!!');
+  if (Number(p1guess.value) > randomNumber){ 
+    feedback1Text.innerText = ('That is too high!');
   } else if (Number(p1guess.value) < randomNumber){ 
     feedback1Text.innerText = ('That is too low!');
-  } else {
-    feedback1Text.innerText = ('That is too high!');
-  }
+  } else { 
+    feedback1Text.innerText = ('Boom!!!');
+    cards.insertAdjacentHTML('afterbegin', `<article class= "cards"> <div class="winner-card-header">
+          <p class="challenger-1-name"> ${p1name.value} </p> 
+          <p class="vs"> vs </p>
+          <p class="challenger-2-name"> ${p2name.value} </p>
+        </div>
+        <h2 class="winner-name"> ${p1name.value} </h2>
+        <h2 class="winner-ticket"> WINNER </h2>
+        <div class="winner-card-footer">
+          <p class="feedback"> <span class="span-feedback"> 47</span> GUESSES </p>
+          <p class="feedback"> <span class="span-feedback"> 1.35 </span> MINUTES </p>
+          <button class="close-button"> x </button>
+        </div> </article>`);
+  };
 };
 
+var cards= document.getElementById('card-section')
 
 function liveFeedback2(){
-  if (Number(p2guess.value) === randomNumber){
-    feedback2Text.innerText = ('Boom!!!');
+  if (Number(p2guess.value) > randomNumber){
+    feedback2Text.innerText = ('That is too high!');
   } else if (Number(p2guess.value) < randomNumber){
     feedback2Text.innerText = ('That is too low!');
   } else {
-    feedback2Text.innerText = ('That is too high!');
-  }
+    feedback2Text.innerText = ('Boom!!!');
+    cards.insertAdjacentHTML('afterbegin', `<article class= "cards"> <div class="winner-card-header">
+          <p class="challenger-1-name"> ${p1name.value} </p> 
+          <p class="vs"> vs </p>
+          <p class="challenger-2-name"> ${p2name.value} </p>
+        </div>
+        <h2 class="winner-name"> ${p2name.value} </h2>
+        <h2 class="winner-ticket"> WINNER </h2>
+        <div class="winner-card-footer">
+          <p class="feedback"> <span class="span-feedback"> 47</span> GUESSES </p>
+          <p class="feedback"> <span class="span-feedback"> 1.35 </span> MINUTES </p>
+          <button class="close-button"> x </button>
+        </div> </article>`);
+  };
 };
 
 
