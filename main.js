@@ -87,6 +87,7 @@ function resetGuessFields (){
  event.preventDefault();
  for (var i = 0; i < resetGuess.length; i++){
   resetGuess[i].value = '';
+  generateRandomNumber(minAutomatic, maxAutomatic);
   };
 };
 //end reset button//
