@@ -1,6 +1,11 @@
 // generateRandomNumber(Number(userMin.value),Number(userMax.value));
 var randomNumber;
 function generateRandomNumber(min,max) {
+  // if (min !== Number){
+  //   min = minAutomatic
+  // } else 
+
+  // }
   return randomNumber = Math.floor(Math.random() * (max - min) + min);
 };
 
@@ -86,9 +91,10 @@ resetGuessButton.addEventListener('click', resetGuessFields);
 function resetGuessFields (){
  event.preventDefault();
  for (var i = 0; i < resetGuess.length; i++){
-  resetGuess[i].value = '';
-  generateRandomNumber(minAutomatic, maxAutomatic);
-  };
+  resetGuess[i].value = ''
+};
+  generateRandomNumber(Number(displayMinNumber.innerText), Number(displayMaxNumber.innerText));
+  console.log(randomNumber);
 };
 //end reset button//
 
@@ -201,7 +207,7 @@ function liveFeedback1(){
   };
 };
 
-var cards= document.getElementById('card-section')
+var cards = document.getElementById('card-section')
 
 function liveFeedback2(){
   if (Number(p2guess.value) > randomNumber){
