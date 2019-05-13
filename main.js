@@ -186,11 +186,11 @@ function liveFeedback1(){
   } else { 
     feedback1Text.innerText = ('Boom!!!');
     cards.insertAdjacentHTML('afterbegin', `<article class= "cards"> <div class="winner-card-header">
-          <p class="challenger-1-name"> CHALLENGER 1 NAME </p> 
+          <p class="challenger-1-name"> ${p1name.value} </p> 
           <p class="vs"> vs </p>
-          <p class="challenger-2-name"> CHALLENGER 2 NAME </p>
+          <p class="challenger-2-name"> ${p2name.value} </p>
         </div>
-        <h2 class="winner-name"> CHALLENGER 2 NAME </h2>
+        <h2 class="winner-name"> ${p1name.value} </h2>
         <h2 class="winner-ticket"> WINNER </h2>
         <div class="winner-card-footer">
           <p class="feedback"> <span class="span-feedback"> 47</span> GUESSES </p>
@@ -210,11 +210,11 @@ function liveFeedback2(){
   } else {
     feedback2Text.innerText = ('Boom!!!');
     cards.insertAdjacentHTML('afterbegin', `<article class= "cards"> <div class="winner-card-header">
-          <p class="challenger-1-name"> CHALLENGER 1 NAME </p> 
+          <p class="challenger-1-name"> ${p1name.value} </p> 
           <p class="vs"> vs </p>
-          <p class="challenger-2-name"> CHALLENGER 2 NAME </p>
+          <p class="challenger-2-name"> ${p2name.value} </p>
         </div>
-        <h2 class="winner-name"> CHALLENGER 2 NAME </h2>
+        <h2 class="winner-name"> ${p2name.value} </h2>
         <h2 class="winner-ticket"> WINNER </h2>
         <div class="winner-card-footer">
           <p class="feedback"> <span class="span-feedback"> 47</span> GUESSES </p>
