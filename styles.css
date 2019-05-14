@@ -84,6 +84,37 @@ input {
   width: 150px;
 }
 
+#hidden-alert-name {
+  
+}
+.hidden-alert {
+  display: flex;
+  margin-top: 10px;
+}
+
+.alert {
+  display: inline;
+  height: 15px;
+  margin-left: 10px;
+  width: 15px;
+}
+
+.name-alert-hidden{
+  visibility: hidden;
+
+}
+
+.alert-message {
+  font-size: 14px;
+  color: #DD1972;
+}
+
+img {
+  margin-right: 10px;
+  visibility: hidden;
+
+}
+
 .min-max {
   width: 250px;
 }
@@ -146,7 +177,7 @@ h4 {
 
 .challenger-all {
   display: flex;
-  margin-bottom: 30px;
+  margin-bottom: 22px;
 }
 
 .input-name {
@@ -170,7 +201,6 @@ h4 {
   font-size: 16px;
   height: 35px;
   margin: 5px;
-  margin: 10px;
   padding: 5px;
   width: 200px;
 }
@@ -198,7 +228,7 @@ h4 {
   display: inline;
   flex: 1;
   height: 230px;
-  margin-top: 18px;
+  margin-top: 63px;
   padding: 10px;
 }
 
@@ -284,6 +314,10 @@ h4 {
   margin-top: 0px;
   text-align: center; 
   width: 33%;
+}
+
+.p2-rename {
+  margin-top: -20px;
 }
 
 .winner-name {
