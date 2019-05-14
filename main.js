@@ -131,6 +131,7 @@ function numAfterClick (){
 function enableUpdate(){
   event.preventDefault();
   document.getElementById('range-button').disabled = false;
+  buttonToggleUpdate();
 };
 //enables other three buttons 
 function enableSRC(){
@@ -138,7 +139,21 @@ function enableSRC(){
   document.getElementById('button-submit').disabled = false;
   document.getElementById('button-reset').disabled = false;
   document.getElementById('button-clear').disabled = false;
+  buttonToggle();
 };
+//disables button when strings are empty
+function buttonToggle() {
+  if (p1name.value === '' && p2name.value === '' && p1guess.value === '' && p2guess.value === ''){
+  document.getElementById('button-submit').disabled = true;
+  document.getElementById('button-reset').disabled = true;
+  document.getElementById('button-clear').disabled = true;
+  }
+}
+//disables update string when inouts are empty
+function buttonToggleUpdate() {
+if (userMin.value === '' && userMax.value === '')
+document.getElementById('range-button').disabled = true;
+}
 //popultes cards on right with player 1 inputs
 function liveFeedback1(){
   if (Number(p1guess.value) > randomNumber){ 
