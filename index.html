@@ -33,10 +33,18 @@
             <div class="challenger-input-name">
               <label class="form-info"> Name </label>
               <input class="all input-name clear" id="name-1" type="text" name="challenger1-name" alt="challenger one name"/>
+              <div id="player-1-name-alert" class="hidden-alert">
+                <img src="images/error-icon.svg" class="img-alert" alt="Error Message"/>
+                <p class="alert-message">Enter a name</p>
+              </div>
             </div>
             <div>
               <label class="form-info"> Guess </label>
               <input id="guess-1" class="all input-guess clear" type="number" name="challenger1-guess" alt="challenger one guess"/>
+              <div id="player-1-guess-alert" class="hidden-alert">
+                <img src="images/error-icon.svg" class="img-alert" alt="Error Message"/>
+                <p class="alert-message"></p>
+              </div>
             </div>
           </div>
           <h4 class="p2-rename rev-name2"> Challenger 2 </h4>
@@ -44,10 +52,18 @@
             <div class="challenger-input-name">
               <label class="form-info"> Name </label>
               <input id="name-2" class="all input-name clear" type="text" name="challenger2-name" alt="challenger two name"/>
+              <div id="player-2-name-alert" class="hidden-alert">
+                <img src="images/error-icon.svg" class="img-alert" alt="Error Message"/>
+                <p class="alert-message">Enter a name</p>
+              </div>
             </div>
             <div">
               <label class="form-info"> Guess </label>
               <input id="guess-2" class="all input-guess clear" type="number" name="challenger2-guess" alt="challenger two guess"/>
+               <div id="player-2-guess-alert" class="hidden-alert">
+                <img src="images/error-icon.svg" class="img-alert" alt="Error Message"/>
+                <p class="alert-message" ></p>
+              </div>
             </div>
           <div class="button-trio">
             <button disabled class="button" id="button-submit" name="submit-guess" alt="submit guess button"> SUBMIT GUESS </button>

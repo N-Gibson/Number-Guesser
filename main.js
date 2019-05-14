@@ -183,3 +183,19 @@ function liveFeedback2(){
         </div> </article>`);
   };
 };
+
+//begin validate guesses//
+
+// submitButton.addEventListener('click', validateGuesses());
+
+// function validateGuesses(){
+//   if (p1guess.value < (Number(displayMinNumber.innerText))) {
+//   "Please enter a value within set range."
+//    status=true;
+//  } else if (p1guess.value > (Number(displayMaxNumber.innerText))) {
+//   "Please enter a value within set range."
+//    status=true;
+//  } else {
+//   status=false;
+
+//end validate guesses//
