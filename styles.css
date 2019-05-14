@@ -180,7 +180,7 @@ h4 {
 .hidden-alert {
   display: flex;
   margin-top: 10px;
-  visibility: hidden;
+  /*visibility: hidden;*/
 }
 
 #player-1-name-alert, #player-2-name-alert, #player-1-guess-alert, #player-2-guess-alert  {

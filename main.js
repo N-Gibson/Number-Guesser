@@ -26,9 +26,11 @@ var revertName2 = document.querySelectorAll('.rev-name2');
 var revertGuesses = document.querySelectorAll('.rev-guesses');
 var feedback1Text = document.getElementById('feedback1');
 var feedback2Text = document.getElementById('feedback2');
-var cards = document.getElementById('card-section')
+var cards = document.getElementById('card-section');
+var alertName1 = document.getElementById('alert-name-1');
+var alertName2 = document.getElementById('alert-name-2');
 //event listeners
-updateButton.addEventListener('click', rangeGenerator);
+updateButton.addEventListener('click', updateEverything);
 submitButton.addEventListener('click', submitEverything)
 resetGuessButton.addEventListener('click', resetGuessFields);
 clearAllButton.addEventListener('click', clearEverything);
@@ -50,6 +52,14 @@ function clearEverything() {
 function submitEverything() {
   updateAllNames();
   updateAllGuesses();
+  playerOneGuessError();
+  playerTwoGuessError();
+  // nameError(p1name, p2name);
+}
+//runs all functions on update button event listener
+function updateEverything() {
+  rangeGenerator();
+  minCompareMax();
 }
 //generate random number
 function generateRandomNumber(min,max) {
@@ -65,6 +75,44 @@ function rangeGenerator(){
   generateRandomNumber(Number(userMin.value), Number(userMax.value));
   console.log(randomNumber)
 };
+//error message if min is greater than max
+function minCompareMax() {
+  event.preventDefault();
+  var minError = document.getElementById('min-error');
+  if (Number(userMin.value) > (userMax.value)) {
+    minError.insertAdjacentHTML('afterbegin', 'Min cannot exceed Max!')
+  } else {
+    minError.innerText = '';
+  }
+}
+// error message if max is less than min p1
+function playerOneGuessError() {
+  event.preventDefault();
+  var guessTooLow = document.getElementById('p1-guess-error')
+  if (Number(p1guess.value < displayMinNumber.innerText)) {
+    guessTooLow.insertAdjacentHTML('afterbegin', 'Guess must be within current range'); 
+  } else {
+    guessTooLow.innerText = '';
+  }
+};
+//error message if max is less than min p2
+function playerTwoGuessError() {
+  event.preventDefault();
+  var guessTooLow = document.getElementById('p2-guess-error')
+  if (Number(p2guess.value < displayMinNumber.innerText)) {
+    guessTooLow.insertAdjacentHTML('afterbegin', 'Guess must be within current range'); 
+  } else {
+    guessTooLow.innerText = '';
+  }
+};
+// error message if there is no name input
+// function nameError(name1, name2) {
+//   event.preventDefault();
+//   // var nameErrorInput = document.querySelectorAll(p1name, p2name)
+//   if (name1 === '') {
+//     return 'Enter a name';
+//   }
+// }
 //update p1 and p2 names everywhere
 function updateAllNames (){
   event.preventDefault();
