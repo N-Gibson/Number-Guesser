@@ -233,37 +233,17 @@ function liveFeedback2(){
 
 //begin validate guesses//
 
-submitButton.addEventListener('click', validateGuesses());
+// submitButton.addEventListener('click', validateGuesses());
 
-function validateGuesses(){
-  if (p1guess.value < (Number(displayMinNumber.innerText))) {
-  "Please enter a value within set range."
-   status=true;
- } else if (p1guess.value > (Number(displayMaxNumber.innerText))) {
-  "Please enter a value within set range."
-   status=true;
- } else {
-  status=false;
- }
-
-}
-
-// function validateGuesses() {
-// //   if (p1guess.value < Number(displayMinNumber.innerText)){
-// //     alert("Error: Guess below minimum range.");
-// //   } else if (p1guess.value > Number(displayMinNumber.innerText)){
-// //     alert("Error. Guess above minimum range.");
-// //   } 
-
-
-// if(name.length<1){  
-// document.getElementById("nameloc").innerHTML=  
-// " <img src='unchecked.gif'/> Please enter your name";  
-// status=false;  
-// }else{  
-// document.getElementById("nameloc").innerHTML=" <img src='checked.gif'/>";  
-// status=true;  
-
+// function validateGuesses(){
+//   if (p1guess.value < (Number(displayMinNumber.innerText))) {
+//   "Please enter a value within set range."
+//    status=true;
+//  } else if (p1guess.value > (Number(displayMaxNumber.innerText))) {
+//   "Please enter a value within set range."
+//    status=true;
+//  } else {
+//   status=false;
 
 //end validate guesses//
 
