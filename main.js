@@ -108,7 +108,7 @@ function challenger1Revert (){
 };
 //populates player 2 names with default value
 function challenger2Revert (){
-  event.preventDefault();
+  // event.preventDefault();
   for (var i = 0; i < revertName2.length; i++){
     revertName2[i].innerText = 'Challenger 2';
   };
