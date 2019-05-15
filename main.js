@@ -44,13 +44,11 @@ p1name.addEventListener('keyup', enableSRC);
 p2name.addEventListener('keyup', enableSRC);
 p1guess.addEventListener('keyup', enableSRC);
 p2guess.addEventListener('keyup', enableSRC);
-
 //runs all functions on update button event listener
 function updateEverything() {
   rangeGenerator();
   minCompareMax();
 }
-
 //runs all functions on clear button event listener
 function clearEverything() {
   emptyAllFields();
@@ -58,28 +56,17 @@ function clearEverything() {
   challenger2Revert();
   guessesRevert();
   numAfterClick();
-  // playerOneGuessError();
-  // playerTwoGuessError();
-  // playerTwoGuessErrorHigh();
-  // playerOneGuessErrorHigh();
 }
-
 //runs all functions on submit button event listener
 function submitEverything() {
   updateAllNames();
   updateAllGuesses();
-  playerOneGuessErrorHigh();
-  playerTwoGuessErrorHigh();
-  playerOneGuessError();
-  playerTwoGuessError();
+  playerOneErrors();
+  playerTwoErrors();
 }
-
+//runs all functions on reset button event listener
 function resetEverything() {
   resetGuessFields();
-  // playerOneGuessError();
-  // playerTwoGuessError();
-  // playerTwoGuessErrorHigh();
-  // playerOneGuessErrorHigh();
 }
 
 //generate random number
@@ -106,35 +93,13 @@ function minCompareMax() {
     minError.innerText = '';
   }
 }
-
-// error message if guess is less than min p1
-function playerOneGuessError() {
+//all errors for p1 guesses
+function playerOneErrors() {
   event.preventDefault();
   if (Number(p1guess.value) < Number(displayMinNumber.innerText)) {
     guessTooLow.style.visibility = 'visible';
     p1guessBorder.style = 'border: 2px solid #F74D9B';
-  } else {
-    guessTooLow.style.visibility = 'hidden';
-    p1guessBorder.style = 'border: 1px solid #DADBDD';
-  }
-}
-
-//error message if guess is less than min p2
-function playerTwoGuessError() {
-  event.preventDefault();
-  if (Number(p2guess.value) < Number(displayMinNumber.innerText)) {
-    guess2Low.style.visibility = 'visible';
-    p2guessBorder.style = 'border: 2px solid #F74D9B';
-  } else {
-    guess2Low.style.visibility = 'hidden';
-    p2guessBorder.style = 'border: 1px solid #DADBDD';
-  }
-}
-
-//error message if guess is less than max p1
-function playerOneGuessErrorHigh() {
-  event.preventDefault();
-  if (Number(p1guess.value) > Number(displayMaxNumber.innerText)) {
+  } else if (Number(p1guess.value) > Number(displayMaxNumber.innerText)) {
     guessTooLow.style.visibility = 'visible';
     p1guessBorder.style = 'border: 2px solid #F74D9B';
   } else {
@@ -142,11 +107,13 @@ function playerOneGuessErrorHigh() {
     p1guessBorder.style = 'border: 1px solid #DADBDD';
   }
 }
-
-//error message if guess is less than max p2
-function playerTwoGuessErrorHigh() {
+//all errors for p2 guesses
+function playerTwoErrors() {
   event.preventDefault();
-  if (Number(p2guess.value) > Number(displayMaxNumber.innerText)) {
+  if (Number(p2guess.value) < Number(displayMinNumber.innerText)) {
+    guess2Low.style.visibility = 'visible';
+    p2guessBorder.style = 'border: 2px solid #F74D9B';
+  } else if (Number(p2guess.value) > Number(displayMaxNumber.innerText)) {
     guess2Low.style.visibility = 'visible';
     p2guessBorder.style = 'border: 2px solid #F74D9B';
   } else {
@@ -154,8 +121,6 @@ function playerTwoGuessErrorHigh() {
     p2guessBorder.style = 'border: 1px solid #DADBDD';
   }
 }
-
-
 //update p1 and p2 names everywhere
 function updateAllNames (){
   event.preventDefault();
