@@ -180,10 +180,13 @@ h4 {
 .hidden-alert {
   display: flex;
   margin-top: 10px;
-  /*visibility: hidden;*/
+  visibility: hidden;
 }
 
-#player-1-name-alert, #player-2-name-alert, #player-1-guess-alert, #player-2-guess-alert  {
+#player-1-name-alert, 
+#player-2-name-alert, 
+#player-1-guess-alert, 
+#player-2-guess-alert  {
   display: flex;
   margin-top: 7px;
 }
@@ -365,7 +368,10 @@ h4 {
 
 /*Media Query*/
 
-@media (max-width: 1350px) {
+@media screen and (max-width: 1350px) {
+  .right {
+    /*background-color: red;*/
+  }
   .min-max {
     width: 210px;
   }
@@ -387,8 +393,9 @@ h4 {
     margin-top: 5px;
     margin-left: 110px;
   }
+}
 
-@media (max-width: 1025px) {
+@media screen and (max-width: 1025px) {
 
   #form-top{
     display: flex;
@@ -422,6 +429,7 @@ h4 {
     flex-wrap: wrap;
     display: block;
   }
+}
 
 /*@media (max-width: 685px){
 

@@ -29,10 +29,14 @@ var feedback2Text = document.getElementById('feedback2');
 var cards = document.getElementById('card-section');
 var alertName1 = document.getElementById('alert-name-1');
 var alertName2 = document.getElementById('alert-name-2');
+var p1guessBorder = document.getElementById('guess-1');
+var p2guessBorder = document.getElementById('guess-2');
+var guessTooLow = document.getElementById('player-1-guess-alert');
+var guess2Low = document.getElementById('player-2-guess-alert');
 //event listeners
 updateButton.addEventListener('click', updateEverything);
-submitButton.addEventListener('click', submitEverything)
-resetGuessButton.addEventListener('click', resetGuessFields);
+submitButton.addEventListener('click', submitEverything);
+resetGuessButton.addEventListener('click', resetEverything);
 clearAllButton.addEventListener('click', clearEverything);
 userMin.addEventListener('keyup', enableUpdate);
 userMax.addEventListener('keyup', enableUpdate);
@@ -40,6 +44,13 @@ p1name.addEventListener('keyup', enableSRC);
 p2name.addEventListener('keyup', enableSRC);
 p1guess.addEventListener('keyup', enableSRC);
 p2guess.addEventListener('keyup', enableSRC);
+
+//runs all functions on update button event listener
+function updateEverything() {
+  rangeGenerator();
+  minCompareMax();
+}
+
 //runs all functions on clear button event listener
 function clearEverything() {
   emptyAllFields();
@@ -47,20 +58,30 @@ function clearEverything() {
   challenger2Revert();
   guessesRevert();
   numAfterClick();
+  // playerOneGuessError();
+  // playerTwoGuessError();
+  // playerTwoGuessErrorHigh();
+  // playerOneGuessErrorHigh();
 }
+
 //runs all functions on submit button event listener
 function submitEverything() {
   updateAllNames();
   updateAllGuesses();
+  playerOneGuessErrorHigh();
+  playerTwoGuessErrorHigh();
   playerOneGuessError();
   playerTwoGuessError();
-  // nameError(p1name, p2name);
 }
-//runs all functions on update button event listener
-function updateEverything() {
-  rangeGenerator();
-  minCompareMax();
+
+function resetEverything() {
+  resetGuessFields();
+  // playerOneGuessError();
+  // playerTwoGuessError();
+  // playerTwoGuessErrorHigh();
+  // playerOneGuessErrorHigh();
 }
+
 //generate random number
 function generateRandomNumber(min,max) {
   return randomNumber = Math.floor(Math.random() * (max - min) + min);
@@ -85,34 +106,56 @@ function minCompareMax() {
     minError.innerText = '';
   }
 }
-// error message if max is less than min p1
+
+// error message if guess is less than min p1
 function playerOneGuessError() {
   event.preventDefault();
-  var guessTooLow = document.getElementById('p1-guess-error')
-  if (Number(p1guess.value < displayMinNumber.innerText)) {
-    guessTooLow.insertAdjacentHTML('afterbegin', 'Guess must be within current range'); 
+  if (Number(p1guess.value) < Number(displayMinNumber.innerText)) {
+    guessTooLow.style.visibility = 'visible';
+    p1guessBorder.style = 'border: 2px solid #F74D9B';
   } else {
-    guessTooLow.innerText = '';
+    guessTooLow.style.visibility = 'hidden';
+    p1guessBorder.style = 'border: 1px solid #DADBDD';
   }
-};
-//error message if max is less than min p2
+}
+
+//error message if guess is less than min p2
 function playerTwoGuessError() {
   event.preventDefault();
-  var guessTooLow = document.getElementById('p2-guess-error')
-  if (Number(p2guess.value < displayMinNumber.innerText)) {
-    guessTooLow.insertAdjacentHTML('afterbegin', 'Guess must be within current range'); 
+  if (Number(p2guess.value) < Number(displayMinNumber.innerText)) {
+    guess2Low.style.visibility = 'visible';
+    p2guessBorder.style = 'border: 2px solid #F74D9B';
   } else {
-    guessTooLow.innerText = '';
+    guess2Low.style.visibility = 'hidden';
+    p2guessBorder.style = 'border: 1px solid #DADBDD';
   }
-};
-// error message if there is no name input
-// function nameError(name1, name2) {
-//   event.preventDefault();
-//   // var nameErrorInput = document.querySelectorAll(p1name, p2name)
-//   if (name1 === '') {
-//     return 'Enter a name';
-//   }
-// }
+}
+
+//error message if guess is less than max p1
+function playerOneGuessErrorHigh() {
+  event.preventDefault();
+  if (Number(p1guess.value) > Number(displayMaxNumber.innerText)) {
+    guessTooLow.style.visibility = 'visible';
+    p1guessBorder.style = 'border: 2px solid #F74D9B';
+  } else {
+    guessTooLow.style.visibility = 'hidden';
+    p1guessBorder.style = 'border: 1px solid #DADBDD';
+  }
+}
+
+//error message if guess is less than max p2
+function playerTwoGuessErrorHigh() {
+  event.preventDefault();
+  if (Number(p2guess.value) > Number(displayMaxNumber.innerText)) {
+    guess2Low.style.visibility = 'visible';
+    p2guessBorder.style = 'border: 2px solid #F74D9B';
+  } else {
+    guess2Low.style.visibility = 'hidden';
+    p2guessBorder.style = 'border: 1px solid #DADBDD';
+  }
+}
+
+
 //update p1 and p2 names everywhere
 function updateAllNames (){
   event.preventDefault();
@@ -183,7 +226,6 @@ function enableUpdate(){
 };
 //enables other three buttons 
 function enableSRC(){
-  event.preventDefault();
   document.getElementById('button-submit').disabled = false;
   document.getElementById('button-reset').disabled = false;
   document.getElementById('button-clear').disabled = false;
