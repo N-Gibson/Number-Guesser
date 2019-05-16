@@ -21,3 +21,12 @@ Prior to beginning the project our team had decided that we both wanted to get a
 
 ## Team Reflection
 We feel this project was very successful. We were able to pair effectively, solve problems, and buildout a functioning number guesser game taking user inputs to update the page. We worked well as a team, encouraging one another, and addressing challenges as they arose. We recognize there are always ways to improve but are happy with the process and the product. 
+
+## Screenshots
+
+### Full Screen
+![](images/number-guesser-screenshot-desktop.png)
+
+### App Format
+![](images/number-guesser-screenshot-mobile.png)
+
