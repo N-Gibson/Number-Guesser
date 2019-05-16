@@ -58,6 +58,8 @@ main {
   display: flex;
 }
 
+/*start left side*/
+
 .left {
   background-color: #F7F7F7;
   border-right: 1px solid #404042;
@@ -69,8 +71,8 @@ main {
 form {
   background-color: white;
   border: 2px solid #AAAAAA;
-  padding: 10px;
   margin: 15px;
+  padding: 10px;
 }
 
 p {
@@ -140,7 +142,7 @@ h4 {
   display: flex;
 }
 
-.form-info{
+.form-info {
   display: block;
 }
 
@@ -174,7 +176,6 @@ h4 {
   width: 200px;
 }
 
-
 /*//hidden alerts//*/
 
 .hidden-alert {
@@ -186,7 +187,7 @@ h4 {
 #player-1-name-alert, 
 #player-2-name-alert, 
 #player-1-guess-alert, 
-#player-2-guess-alert  {
+#player-2-guess-alert {
   display: flex;
   margin-top: 7px;
 }
@@ -206,8 +207,10 @@ h4 {
 #min-error {
   color: #DD1972;
 }
-/*//hidden alert//*/
 
+/*//end hidden alert//*/
+
+/*latest score card start*/
 
 .latest-score-container {
   background-color: white;
@@ -236,7 +239,7 @@ h4 {
   padding: 10px;
 }
 
-.guess-challenger-name{
+.guess-challenger-name {
   color: #D0D2D3;
   font-weight: 700;
   margin: 0px;
@@ -264,11 +267,15 @@ h4 {
   text-align: center;
 }
 
-.feedback-left{
+.feedback-left {
   text-align: center;
 }
 
-/*right side*/
+/*latest score card end*/
+
+/*end left side*/
+
+/*start right side*/
 
 .right {
   background-color: #DADBDD;
@@ -355,7 +362,7 @@ h4 {
   width: 33%;
 }
 
-.span-feedback{
+.span-feedback {
   font-weight: 700;
   width: 33%;
 
@@ -377,7 +384,7 @@ h4 {
     width: 210px;
   }
 
-  .input-name{
+  .input-name {
     width: 210px;
   }
 
@@ -385,14 +392,14 @@ h4 {
     width: 210px;
   }
 
-  .form-flex{
+  .form-flex {
     flex-wrap: wrap;
   }
 
   .update-button {
-    width: 200px;
     margin-top: 5px;
     margin-left: 230px;
+    width: 200px;
   }
 
   #min-error {
@@ -402,7 +409,7 @@ h4 {
 
 @media screen and (max-width: 1025px) {
 
-  #form-top{
+  #form-top {
     display: flex;
     flex-wrap: wrap;
     height: 300px;
@@ -431,9 +438,9 @@ h4 {
     flex-wrap: wrap;
   }
 
-  .p1-rename{
-    flex-wrap: wrap;
+  .p1-rename { 
     display: block;
+    flex-wrap: wrap;
     margin-top: 0px;
     margin-right: 200px;
     width: 100%;
@@ -471,14 +478,18 @@ h4 {
     font-size: 35px;
   }
 
+  .middle-box {
+    height: 700px;
+  }
+
   #h4-style {
     font-size: 16px;
   }
 
   .cards {
-    position: absolute;
     margin-top: 1350px;
     margin-left: -95%;
+    position: absolute;
     width: 90%;
   }
 
@@ -491,11 +502,11 @@ h4 {
  }
 
  .left {
-  width: 100%;
+    width: 100%;
  }
 
  .latest-score-right {
-  margin-top: 60px;
+    margin-top: 60px;
  }
 
 }
