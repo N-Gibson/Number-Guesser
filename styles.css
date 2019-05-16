@@ -169,6 +169,7 @@ h4 {
   font-weight: 700;
   font-size: 16px;
   height: 35px;
+  margin: 10px;
   padding: 5px;
   width: 200px;
 }
@@ -202,6 +203,9 @@ h4 {
   margin-left: 7px;
 }
 
+#min-error {
+  color: #DD1972;
+}
 /*//hidden alert//*/
 
 
@@ -367,10 +371,8 @@ h4 {
 
 /*Media Query*/
 
-@media screen and (max-width: 1350px) {
-  .right {
-    /*background-color: red;*/
-  }
+@media screen and (max-width: 1380px) {
+ 
   .min-max {
     width: 210px;
   }
@@ -390,7 +392,11 @@ h4 {
   .update-button {
     width: 200px;
     margin-top: 5px;
-    margin-left: 110px;
+    margin-left: 230px;
+  }
+
+  #min-error {
+    margin-top: -30px;
   }
 }
 
@@ -409,7 +415,7 @@ h4 {
   .middle-box {
     display: flex;
     flex-wrap: wrap;
-    height: 550px;
+    height: 600px;
   }
 
   .challenger-all {
@@ -418,6 +424,7 @@ h4 {
 
   .button-trio {
     flex-wrap: wrap;
+    margin-top: -45px;
   }
 
   .p-style {
@@ -427,9 +434,68 @@ h4 {
   .p1-rename{
     flex-wrap: wrap;
     display: block;
+    margin-top: 0px;
+    margin-right: 200px;
+    width: 100%;
+  }
+
+  #min-error {
+    margin-top: -90px;
+  }
+
+  .update-button {
+    margin-top: 60px;
+  }
+
+ .latest-score-container {
+    height: 320px;
+  }
+
+  .latest-score-right {
+    width: 50%;
+  }
+
+  .latest-score-left {
+    margin-top: 10px;
+    width: 50%;
   }
 }
 
-/*@media (max-width: 685px){
+@media screen and (max-width: 675px) {
 
+  body {
+    margin: 0 0;
+  }
 
+  h1 {
+    font-size: 35px;
+  }
+
+  #h4-style {
+    font-size: 16px;
+  }
+
+  .cards {
+    position: absolute;
+    margin-top: 1350px;
+    margin-left: -95%;
+    width: 90%;
+  }
+
+  #media-style-p2 {
+    margin-right:80%;
+  }
+
+  #card-section {
+    width: 0;
+ }
+
+ .left {
+  width: 100%;
+ }
+
+ .latest-score-right {
+  margin-top: 60px;
+ }
+
+}
