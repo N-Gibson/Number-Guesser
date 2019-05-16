@@ -140,7 +140,7 @@ h4 {
   display: flex;
 }
 
-.form-info{
+.form-info {
   display: block;
 }
 
@@ -174,7 +174,6 @@ h4 {
   width: 200px;
 }
 
-
 /*//hidden alerts//*/
 
 .hidden-alert {
@@ -186,7 +185,7 @@ h4 {
 #player-1-name-alert, 
 #player-2-name-alert, 
 #player-1-guess-alert, 
-#player-2-guess-alert  {
+#player-2-guess-alert {
   display: flex;
   margin-top: 7px;
 }
@@ -206,8 +205,8 @@ h4 {
 #min-error {
   color: #DD1972;
 }
-/*//hidden alert//*/
 
+/*//end hidden alert//*/
 
 .latest-score-container {
   background-color: white;
@@ -236,7 +235,7 @@ h4 {
   padding: 10px;
 }
 
-.guess-challenger-name{
+.guess-challenger-name {
   color: #D0D2D3;
   font-weight: 700;
   margin: 0px;
@@ -264,7 +263,7 @@ h4 {
   text-align: center;
 }
 
-.feedback-left{
+.feedback-left {
   text-align: center;
 }
 
@@ -355,7 +354,7 @@ h4 {
   width: 33%;
 }
 
-.span-feedback{
+.span-feedback {
   font-weight: 700;
   width: 33%;
 
@@ -377,7 +376,7 @@ h4 {
     width: 210px;
   }
 
-  .input-name{
+  .input-name {
     width: 210px;
   }
 
@@ -385,7 +384,7 @@ h4 {
     width: 210px;
   }
 
-  .form-flex{
+  .form-flex {
     flex-wrap: wrap;
   }
 
@@ -402,7 +401,7 @@ h4 {
 
 @media screen and (max-width: 1025px) {
 
-  #form-top{
+  #form-top {
     display: flex;
     flex-wrap: wrap;
     height: 300px;
@@ -431,7 +430,7 @@ h4 {
     flex-wrap: wrap;
   }
 
-  .p1-rename{
+  .p1-rename {
     flex-wrap: wrap;
     display: block;
     margin-top: 0px;
