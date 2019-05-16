@@ -27,8 +27,8 @@ var revertGuesses = document.querySelectorAll('.rev-guesses');
 var feedback1Text = document.getElementById('feedback1');
 var feedback2Text = document.getElementById('feedback2');
 var cards = document.getElementById('card-section');
-var alertName1 = document.getElementById('alert-name-1');
-var alertName2 = document.getElementById('alert-name-2');
+var alertName1 = document.getElementById('player-1-name-alert');
+var alertName2 = document.getElementById('player-2-name-alert');
 var p1guessBorder = document.getElementById('guess-1');
 var p2guessBorder = document.getElementById('guess-2');
 var guessTooLow = document.getElementById('player-1-guess-alert');
@@ -63,12 +63,13 @@ function submitEverything() {
   updateAllGuesses();
   playerOneErrors();
   playerTwoErrors();
-}
+  playerOneNameErrors();
+  playerTwoNameErrors();
+  }
 //runs all functions on reset button event listener
 function resetEverything() {
   resetGuessFields();
 }
-
 //generate random number
 function generateRandomNumber(min,max) {
   return randomNumber = Math.floor(Math.random() * (max - min) + min);
@@ -119,6 +120,30 @@ function playerTwoErrors() {
   } else {
     guess2Low.style.visibility = 'hidden';
     p2guessBorder.style = 'border: 1px solid #DADBDD';
+  }
+}
+//error on name field p1
+function playerOneNameErrors() {
+  var name1InputValue = document.getElementById('name-1')
+  event.preventDefault();
+  if (p1name.value === '') {
+    alertName1.style.visibility = 'visible';
+    name1InputValue.style = 'border: 2px solid #F74D9B';
+  } else { 
+    alertName1.style.visibility = 'hidden';
+    name1InputValue.style = 'border: 1px solid #DADBDD';
+  }
+}
+//error on name field p2
+function playerTwoNameErrors() {
+  var name2InputValue = document.getElementById('name-2')
+  event.preventDefault();
+  if (p2name.value === '') {
+    alertName2.style.visibility = 'visible';
+    name2InputValue.style = 'border: 2px solid #F74D9B';
+  } else {
+    alertName2.style.visibility = 'hidden';
+    name2InputValue.style = 'border: 1px solid #DADBDD';
   }
 }
 //update p1 and p2 names everywhere
@@ -251,21 +276,5 @@ function liveFeedback2(){
           <p class="feedback"> <span class="span-feedback"> 1.35 </span> MINUTES </p>
           <button class="close-button"> x </button>
         </div> </article>`);
-  };
+  }
 };
-
-//begin validate guesses//
-
-// submitButton.addEventListener('click', validateGuesses());
-
-// function validateGuesses(){
-//   if (p1guess.value < (Number(displayMinNumber.innerText))) {
-//   "Please enter a value within set range."
-//    status=true;
-//  } else if (p1guess.value > (Number(displayMaxNumber.innerText))) {
-//   "Please enter a value within set range."
-//    status=true;
-//  } else {
-//   status=false;
-
-//end validate guesses//

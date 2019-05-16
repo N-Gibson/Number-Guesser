@@ -169,7 +169,7 @@ h4 {
   font-weight: 700;
   font-size: 16px;
   height: 35px;
- padding: 5px;
+  padding: 5px;
   width: 200px;
 }
 
@@ -179,8 +179,8 @@ h4 {
 .hidden-alert {
   display: flex;
   margin-top: 10px;
-/*  visibility: hidden;
-*/}
+  visibility: hidden;
+}
 
 #player-1-name-alert, 
 #player-2-name-alert, 
